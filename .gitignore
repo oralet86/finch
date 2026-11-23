@@ -8,6 +8,7 @@ vendor
 runs
 AGENTS.md
 CLAUDE.md
+journal
 
 # OpenCode plugin setup
 .opencode
