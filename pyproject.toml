@@ -1,0 +1,43 @@
+[project]
+name = "teaspoon"
+version = "0.1.0"
+description = "Finch: Adaptive Control in the 2D Irregular Nesting Problem"
+readme = "README.md"
+authors = [
+    { name = "oralet86", email = "mert.ficici86@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "pandas>=3.1.1",
+    "scikit-learn>=1.9.1",
+    "scipy>=1.18.1",
+    "shapely>=2.2.0",
+    "torch>=2.15.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "standard"
+exclude = ["data", "vendor", "runs", "papers", ".venv"]
+
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.411",
+    "pytest>=9.1.1",
+    "ruff>=0.16.4",
+]
